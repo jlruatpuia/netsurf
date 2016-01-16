@@ -76,6 +76,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.8.3\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -98,6 +102,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Site.Master" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="FrontOffice\FrontOffice.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,12 +121,195 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="css\bootstrap\bootstrap.min.css" />
+    <Content Include="css\cleditor\jquery.cleditor.css" />
+    <Content Include="css\codemirror\codemirror.css" />
+    <Content Include="css\colorpicker\colorpicker.css" />
+    <Content Include="css\datatables\jquery.dataTables.css" />
+    <Content Include="css\elfinder\elfinder.min.css" />
+    <Content Include="css\fancybox\jquery.fancybox.css" />
+    <Content Include="css\filetree\jqueryFileTree.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="css\fullcalendar\fullcalendar.css" />
+    <Content Include="css\ibutton\jquery.ibutton.css" />
+    <Content Include="css\icomoon.css" />
+    <Content Include="css\img\arrows-active.html" />
+    <Content Include="css\img\error.html" />
+    <Content Include="css\jquery\jquery-ui-1.10.3.custom.css" />
+    <Content Include="css\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="css\mcustomscrollbar\jquery.mCustomScrollbar.css" />
+    <Content Include="css\multiselect\multi-select.css" />
+    <Content Include="css\mystyles.css" />
+    <Content Include="css\select2\select2.css" />
+    <Content Include="css\shbrush\shCoreDefault.css" />
+    <Content Include="css\shbrush\shThemeDefault.css" />
+    <Content Include="css\stepy\jquery.stepy.css" />
+    <Content Include="css\stylesheet.css" />
+    <Content Include="css\stylesheets.css" />
+    <Content Include="css\tagsinput\jquery.tagsinput.css" />
+    <Content Include="css\themes.css" />
+    <Content Include="css\uniform\uniform.default.css" />
+    <Content Include="css\validationengine\validationEngine.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FrontOffice\Default.aspx" />
+    <Content Include="img\datatables\sort_asc.png" />
+    <Content Include="img\datatables\sort_asc_disabled.png" />
+    <Content Include="img\datatables\sort_both.png" />
+    <Content Include="img\datatables\sort_desc.png" />
+    <Content Include="img\datatables\sort_desc_disabled.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\jquery\animated-overlay.gif" />
+    <Content Include="img\jquery\dateArrows.png" />
+    <Content Include="img\jquery\dialog_close.png" />
+    <Content Include="img\jquery\slider.png" />
+    <Content Include="img\jquery\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="img\jquery\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="img\jquery\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="img\jquery\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="img\jquery\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="img\jquery\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="img\jquery\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="img\jquery\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="img\jquery\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="img\jquery\ui-icons_222222_256x240.png" />
+    <Content Include="img\jquery\ui-icons_228ef1_256x240.png" />
+    <Content Include="img\jquery\ui-icons_ef8c08_256x240.png" />
+    <Content Include="img\jquery\ui-icons_ffd27a_256x240.png" />
+    <Content Include="img\jquery\ui-icons_ffffff_256x240.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo_dark.png" />
+    <Content Include="img\logo_small.png" />
+    <Content Include="img\multiselect\switch.png" />
+    <Content Include="img\select2\select2-spinner.gif" />
+    <Content Include="img\select2\select2.png" />
+    <Content Include="img\select2\select2x2.png" />
+    <Content Include="img\status.png" />
+    <Content Include="img\themes\dark\content_line.png" />
+    <Content Include="img\themes\dark\nav_arrow.png" />
+    <Content Include="img\themes\dark\nav_arrow_a.png" />
+    <Content Include="img\themes\default\content_line.png" />
+    <Content Include="img\themes\default\nav_arrow.png" />
+    <Content Include="img\themes\default\nav_arrow_a.png" />
+    <Content Include="img\themes\simple\nav_arrow.png" />
+    <Content Include="img\themes\simple\nav_arrow_a.png" />
+    <Content Include="js\actions.js" />
+    <Content Include="js\bootstrap\bootstrap.min.js" />
+    <Content Include="js\charts.js" />
+    <Content Include="js\charts\excanvas.min.js" />
+    <Content Include="js\charts\jquery.flot.js" />
+    <Content Include="js\charts\jquery.flot.pie.js" />
+    <Content Include="js\charts\jquery.flot.resize.js" />
+    <Content Include="js\charts\jquery.flot.stack.js" />
+    <Content Include="js\cleditor\jquery.cleditor.min.js" />
+    <Content Include="js\codemirror\addon\edit\matchbrackets.js" />
+    <Content Include="js\codemirror\codemirror.js" />
+    <Content Include="js\codemirror\mode\clike\clike.js" />
+    <Content Include="js\codemirror\mode\css\css.js" />
+    <Content Include="js\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="js\codemirror\mode\javascript\javascript.js" />
+    <Content Include="js\codemirror\mode\php\php.js" />
+    <Content Include="js\codemirror\mode\xml\xml.js" />
+    <Content Include="js\colorpicker\colorpicker.js" />
+    <Content Include="js\cookies\jquery.cookies.2.2.0.min.js" />
+    <Content Include="js\datatables\jquery.dataTables.min.js" />
+    <Content Include="js\elfinder\elfinder.min.js" />
+    <Content Include="js\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="js\filetree\jqueryFileTree.js" />
+    <Content Include="js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="js\highlight\jquery.highlight-4.js" />
+    <Content Include="js\ibutton\jquery.ibutton.min.js" />
+    <Content Include="js\jquery\globalize.js" />
+    <Content Include="js\jquery\jquery-migrate.min.js" />
+    <Content Include="js\jquery\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="js\jquery\jquery.min.js" />
+    <Content Include="js\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="js\jvectormap\jquery-jvectormap-europe-mill-en.js" />
+    <Content Include="js\jvectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="js\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="js\maps.js" />
+    <Content Include="js\maskedinput\jquery.maskedinput.min.js" />
+    <Content Include="js\mcustomscrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="js\morris\morris.min.js" />
+    <Content Include="js\morris\raphael-min.js" />
+    <Content Include="js\multiselect\jquery.multi-select.js" />
+    <Content Include="js\nicedit\nicEdit.js" />
+    <Content Include="js\noty\jquery.noty.js" />
+    <Content Include="js\noty\layouts\topCenter.js" />
+    <Content Include="js\noty\layouts\topLeft.js" />
+    <Content Include="js\noty\layouts\topRight.js" />
+    <Content Include="js\noty\themes\default.js" />
+    <Content Include="js\other\faq.js" />
+    <Content Include="js\other\table_edit.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\plupload\jquery.plupload.queue\css\jquery.plupload.queue.css" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\backgrounds.gif" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\buttons-disabled.png" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\buttons.png" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\delete.gif" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\done.gif" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\error.gif" />
+    <Content Include="js\plupload\jquery.plupload.queue\img\transp50.png" />
+    <Content Include="js\plupload\jquery.plupload.queue\jquery.plupload.queue.js" />
+    <Content Include="js\plupload\plupload.browserplus.js" />
+    <Content Include="js\plupload\plupload.flash.js" />
+    <Content Include="js\plupload\plupload.gears.js" />
+    <Content Include="js\plupload\plupload.html4.js" />
+    <Content Include="js\plupload\plupload.html5.js" />
+    <Content Include="js\plupload\plupload.js" />
+    <Content Include="js\plupload\plupload.silverlight.js" />
+    <Content Include="js\scrollup\jquery.scrollUp.min.js" />
+    <Content Include="js\select2\select2.min.js" />
+    <Content Include="js\shbrush\shBrushCss.js" />
+    <Content Include="js\shbrush\shBrushJScript.js" />
+    <Content Include="js\shbrush\shBrushXml.js" />
+    <Content Include="js\shbrush\shCore.js" />
+    <Content Include="js\shbrush\XRegExp.js" />
+    <Content Include="js\sparklines\jquery.sparkline.min.js" />
+    <Content Include="js\stepy\jquery.stepy.min.js" />
+    <Content Include="js\tagsinput\jquery.tagsinput.min.js" />
+    <Content Include="js\timepicker\jquery-ui-timepicker-addon.js" />
+    <Content Include="js\uniform\jquery.uniform.min.js" />
+    <Content Include="js\validationengine\jquery.validationEngine.js" />
+    <Content Include="js\validationengine\languages\jquery.validationEngine-en.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Codes\Customers.cs" />
+    <Compile Include="Codes\dbHelper.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOffice\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontOffice\FrontOffice.master.cs">
+      <DependentUpon>FrontOffice.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontOffice\FrontOffice.master.designer.cs">
+      <DependentUpon>FrontOffice.master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\fontawesome\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

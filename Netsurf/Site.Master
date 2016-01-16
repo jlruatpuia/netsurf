@@ -1,0 +1,156 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Netsurf.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%= Page.Title %> : Netsurf</title>
+    <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css" />
+    
+    <link href="css/stylesheets.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <script runat="server">
+        protected string SetCssClass(string page)
+        {
+            return Request.Url.AbsolutePath.ToLower().EndsWith(page.ToLower()) ? "active" : "";
+        }
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        
+        <div id="header">
+            
+            <div class="wrap">
+                
+                <a href="index-2.html" class="logo"></a>
+                
+                <div class="buttons fl">
+                    <div class="item">
+                        <a href="#" class="btn btn-primary btn-sm c_layout">
+                            <span class="fa fa-laptop"></span>                            
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#" class="btn btn-primary btn-sm c_screen">
+                            <span class="fa fa-expand"></span>                            
+                        </a>
+                    </div>                    
+                </div>
+                
+                <div class="buttons">
+                    
+                    <div class="item">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <span class="i-chat"></span>
+                        </a>
+                        <div class="popup">
+                            <div class="head">
+                                <h2>Messages</h2>
+                            </div>
+                            <div class="content npb messages minify" id="messages"></div>
+                            <div class="footer">
+                                <div class="side fl">
+                                    <button class="btn btn-link">Show all</button>
+                                </div>
+                                <div class="side fr">
+                                    <button class="btn btn-primary popup-close">Close</button>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">                        
+                        <div class="btn-group">                        
+                            <a href="#" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <span class="i-forward"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="i-profile"></span> Profile</a></li>
+                                <li><a href="#"><span class="i-tools"></span> Controls</a></li>                                
+                                <li><a href="#"><span class="i-locked"></span> Lock</a></li>
+                                <li><a href="#"><span class="i-forward"></span> Logout</a></li>
+                            </ul> 
+                        </div>
+                    </div>                
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div id="layout">
+        
+            <div id="sidebar">
+
+                <div class="user">
+                    <div class="pic">
+                        <img src="img/examples/users/dmitry_m.jpg"/>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <a href="#">John Doe</a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#"><span class="fa fa-cog"></span> Settings</a>
+                            <a href="#"><span class="fa fa-envelope-o"></span> Messages</a>
+                            <a href="#" class="fr"><span class="fa fa-power-off"></span> Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="navigation">
+                    <li class='<%= SetCssClass("Default.aspx") %>'>
+                        <a href="Default.aspx">Dashboard</a>
+                    </li>
+                    <li><a href="#">Front Office</a></li>
+                    <li>
+                        <a href="#">Account</a>
+                    </li>                                
+                    <li>
+                        <a href="#">Store</a>
+                    </li>                                   
+                    <li>
+                        <a href="#">Technical</a>                       
+                    </li>                
+                    <li>
+                        <a href="#">Settings</a>                       
+                    </li>
+                </ul>
+
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='js/jquery/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-ui-1.10.3.custom.min.js'></script>
+    <script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js/jquery/globalize.js'></script>
+    
+    <script type='text/javascript' src='js/bootstrap/bootstrap.min.js'></script>
+    <script type='text/javascript' src='js/cookies/jquery.cookies.2.2.0.min.js'></script>
+    
+    <script type='text/javascript' src='js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script type='text/javascript' src='js/charts/excanvas.min.js'></script>    
+    <script type='text/javascript' src='js/charts/jquery.flot.js'></script>    
+    <script type='text/javascript' src='js/charts/jquery.flot.stack.js'></script>    
+    <script type='text/javascript' src='js/charts/jquery.flot.pie.js'></script>
+    <script type='text/javascript' src='js/charts/jquery.flot.resize.js'></script>    
+    
+    <script type='text/javascript' src='js/morris/raphael-min.js'></script>
+    <script type='text/javascript' src='js/morris/morris.min.js'></script>    
+    
+    <script type='text/javascript' src='js/sparklines/jquery.sparkline.min.js'></script>    
+
+    <script type='text/javascript' src='js/scrollup/jquery.scrollUp.min.js'></script>
+    
+    <script type='text/javascript' src='js/plugins.js'></script>    
+    <script type='text/javascript' src='js/actions.js'></script>
+    <script type='text/javascript' src='js/charts.js'></script>   
+</body>
+</html>
